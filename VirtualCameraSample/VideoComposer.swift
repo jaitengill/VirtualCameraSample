@@ -12,15 +12,15 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
 
     weak var delegate: VideoComposerDelegate?
 
-    private let deepAR = DeepAR()
-//    private let cameraController = CameraController.init()
-
+    private let deepAR = DeepAR();
     private let cameraCapture = CameraCapture()
     private let context = CIContext()
     private var settingsTimer: Timer?
 
     private let filter = CIFilter(name: "CISourceOverCompositing")
     private var textImage: CIImage?
+
+    private var count = 0;
 
     private let CVPixelBufferCreateOptions: [String: Any] = [
         kCVPixelBufferCGImageCompatibilityKey as String: true,
@@ -35,16 +35,15 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
     func startRunning() {
         self.deepAR.setLicenseKey("949a402a628926a9ceb24be7ab4210d72f5220b091a54b64a061a02ab8f48f3b9948e48704073c67")
         self.deepAR.delegate = self
-
-//        self.deepAR.resume()
-//        self.deepAR.switchEffect(withSlot: "0", path: Bundle.main.path(forResource: "fire", ofType: nil))
-//
-        
-        startPollingSettings()
+        self.deepAR.initializeOffscreen(withWidth: 1, height: 1)
+        self.deepAR.setRenderingResolutionWithWidth(1280, height: 720)
+//        startPollingSettings()
         cameraCapture.output.setSampleBufferDelegate(self, queue: .main)
         cameraCapture.startRunning()
-        self.deepAR.startCapture(withOutputWidth: 1280, outputHeight: 720, subframe: CGRect(x: 0,y: 0,width: 1280,height: 720))
-
+    }
+    
+    func didInitialize() {
+        
     }
 
     func stopRunning() {
@@ -58,52 +57,52 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
         settingsTimer = nil
         settingsTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             let settings = SettingsPasteboard.shared.current()
-            let text1 = settings["text1"] as? String ?? "no value"
-            self.textImage = self.makeTextCIImage(text: "HELLOS")
+            let text1 = settings["text1"] as? String ?? "Version One"
+            self.textImage = self.makeTextCIImage(text: text1)
         }
         settingsTimer?.fire()
     }
-    
-  
+
     func frameAvailable(_ sampleBuffer: CMSampleBuffer!) {
-        guard let imageBuffer =     CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-                    
+        self.count += 1
+        self.textImage = self.makeTextCIImage(text: String(self.count))
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+
         let cameraImage = CIImage(cvImageBuffer: imageBuffer)
-        
+        let compositedImage = compose(bgImage: cameraImage, overlayImage: self.textImage)
+
         var pixelBuffer: CVPixelBuffer?
-        
+
         _ = CVPixelBufferCreate(
             kCFAllocatorDefault,
-            1280,
-            720,
+            Int(compositedImage.extent.size.width),
+            Int(compositedImage.extent.height),
             kCVPixelFormatType_32BGRA,
             self.CVPixelBufferCreateOptions as CFDictionary,
             &pixelBuffer
         )
-        
+
         if let pixelBuffer = pixelBuffer {
-            context.render(cameraImage, to: pixelBuffer)
+            context.render(compositedImage, to: pixelBuffer)
             delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
         }
     }
-
+    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if output == cameraCapture.output {
-
-//            guard let imageBuffer =     CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
             
             self.deepAR.enqueueCameraFrame(sampleBuffer, mirror: false)
-//            let cameraImage = CIImage(cvImageBuffer: imageBuffer)
-            
+//            guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
 //
+//            let cameraImage = CIImage(cvImageBuffer: imageBuffer)
 //            let compositedImage = compose(bgImage: cameraImage, overlayImage: self.textImage)
 //
 //            var pixelBuffer: CVPixelBuffer?
 //
 //            _ = CVPixelBufferCreate(
 //                kCFAllocatorDefault,
-//                1280,
-//                720,
+//                Int(compositedImage.extent.size.width),
+//                Int(compositedImage.extent.height),
 //                kCVPixelFormatType_32BGRA,
 //                self.CVPixelBufferCreateOptions as CFDictionary,
 //                &pixelBuffer
@@ -111,29 +110,8 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
 //
 //            if let pixelBuffer = pixelBuffer {
 //                context.render(compositedImage, to: pixelBuffer)
-//
-//                self.deepAR.enq(pixelBuffer, mirror: false, orientation: 0)
-////                delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
+//                delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
 //            }
-            
-//
-//            var pixelBuffer2: CVPixelBuffer?
-//
-//            _ = CVPixelBufferCreate(
-//                kCFAllocatorDefault,
-//                1280,
-//                720,
-//                kCVPixelFormatType_32BGRA,
-//                self.CVPixelBufferCreateOptions as CFDictionary,
-//                &pixelBuffer2
-//            )
-//
-//            if let pixelBuffer2 = pixelBuffer2 {
-//    //            context.render
-//                self.deepAR.processFrameAndReturn(pixelBuffer, outputBuffer: pixelBuffer2, mirror: false, orientation: 0)
-//                delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer!)
-//            }
-        
         }
     }
 

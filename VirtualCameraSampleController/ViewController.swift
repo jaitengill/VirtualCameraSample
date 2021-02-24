@@ -14,6 +14,8 @@ class ViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SampleComposerObj.init()
         self.deepAR.setLicenseKey("62d5b2615f2df5a495f41f5b617ae7eed7eb7f4f67eab92f9dc57327e3b2db87537013befcbe6398")
 
         mainTextField.delegate = self

@@ -32,6 +32,7 @@
 		FA4075FA25E54AE90043F32F /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA4075DD25E53E0E0043F32F /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAEB5B7A25E55756009273E7 /* DeepAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4075DD25E53E0E0043F32F /* DeepAR.framework */; };
 		FAEB5B7B25E55756009273E7 /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA4075DD25E53E0E0043F32F /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FAEB5B7E25E65303009273E7 /* SampleComposerObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB5B7D25E65303009273E7 /* SampleComposerObj.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +89,7 @@
 		FA4075DD25E53E0E0043F32F /* DeepAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DeepAR.framework; sourceTree = "<group>"; };
 		FA4075EF25E5491C0043F32F /* fire */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire; sourceTree = "<group>"; };
 		FAEB5B7825E556F8009273E7 /* VirtualCameraSampleController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VirtualCameraSampleController-Bridging-Header.h"; sourceTree = "<group>"; };
+		FAEB5B7D25E65303009273E7 /* SampleComposerObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleComposerObj.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 				ABB04E872515A8160038D75C /* Info.plist */,
 				ABB04E882515A8160038D75C /* VirtualCameraSampleController.entitlements */,
 				FAEB5B7825E556F8009273E7 /* VirtualCameraSampleController-Bridging-Header.h */,
+				FAEB5B7D25E65303009273E7 /* SampleComposerObj.swift */,
 			);
 			path = VirtualCameraSampleController;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				ABB04E9D25162D310038D75C /* WindowController.swift in Sources */,
 				ABB04EB225194A7D0038D75C /* Config.swift in Sources */,
 				ABB04E812515A8140038D75C /* ViewController.swift in Sources */,
+				FAEB5B7E25E65303009273E7 /* SampleComposerObj.swift in Sources */,
 				ABB04E7F2515A8140038D75C /* AppDelegate.swift in Sources */,
 				ABB04EB425194A7D0038D75C /* SettingsPasteboard.swift in Sources */,
 			);
