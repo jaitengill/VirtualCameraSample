@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -711,7 +711,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tEs-BS-Zed">
-                                <rect key="frame" x="205" y="13" width="71" height="32"/>
+                                <rect key="frame" x="208" y="13" width="65" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="zo0-3m-6lP"/>
                                 </constraints>
@@ -724,7 +724,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ee2-5E-S2x">
-                                <rect key="frame" x="394" y="13" width="72" height="32"/>
+                                <rect key="frame" x="401" y="13" width="66" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DVe-zi-Ec6"/>
                                 </constraints>
@@ -748,6 +748,11 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JKx-Oc-aZM">
+                                <rect key="frame" x="20" y="191" width="406" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="sT8-C3-MCR"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ee2-5E-S2x" secondAttribute="trailing" constant="20" symbolic="YES" id="1Bs-le-hvW"/>
@@ -759,6 +764,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="JKx-Oc-aZM" id="n6x-0q-JaP"/>
                         <outlet property="mainTextField" destination="CAT-zL-Xlr" id="C4X-SJ-NYT"/>
                     </connections>
                 </viewController>

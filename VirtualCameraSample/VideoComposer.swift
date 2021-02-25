@@ -12,10 +12,10 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
 
     weak var delegate: VideoComposerDelegate?
 
-    private let deepAR = DeepAR();
     private let cameraCapture = CameraCapture()
     private let context = CIContext()
     private var settingsTimer: Timer?
+    private var deepAR: DeepAR?
 
     private let filter = CIFilter(name: "CISourceOverCompositing")
     private var textImage: CIImage?
@@ -33,17 +33,25 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
     }
 
     func startRunning() {
-        self.deepAR.setLicenseKey("949a402a628926a9ceb24be7ab4210d72f5220b091a54b64a061a02ab8f48f3b9948e48704073c67")
-        self.deepAR.delegate = self
-        self.deepAR.initializeOffscreen(withWidth: 1, height: 1)
-        self.deepAR.setRenderingResolutionWithWidth(1280, height: 720)
+        self.deepAR = DeepAR.init()
+        self.deepAR?.setLicenseKey("949a402a628926a9ceb24be7ab4210d72f5220b091a54b64a061a02ab8f48f3b9948e48704073c67")
+        self.deepAR?.delegate = self
+        
+        self.deepAR?.initializeOffscreen(withWidth: 1, height: 1)
+        self.deepAR?.startCapture(withOutputWidth: 1280, outputHeight: 720, subframe: CGRect(x: 0, y: 0, width: 1280, height: 720))
+//        self.deepAR?.changeLiveMode(true)
 //        startPollingSettings()
         cameraCapture.output.setSampleBufferDelegate(self, queue: .main)
         cameraCapture.startRunning()
+   
     }
     
     func didInitialize() {
-        
+        self.deepAR?.switchEffect(withSlot: "0", path: Bundle.main.path(forResource: "fire", ofType: nil))
+
+//        self.deepAR.setRenderingResolutionWithWidth(1280, height: 720)
+//        self.deepAR.changeLiveMode(true)
+//        self.deepAR.startCapture(withOutputWidth: 1280, outputHeight: 720, subframe: CGRect(x: 0,y: 0,width: 1280,height: 720))
     }
 
     func stopRunning() {
@@ -64,34 +72,93 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
     }
 
     func frameAvailable(_ sampleBuffer: CMSampleBuffer!) {
-        self.count += 1
-        self.textImage = self.makeTextCIImage(text: String(self.count))
-        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-
-        let cameraImage = CIImage(cvImageBuffer: imageBuffer)
-        let compositedImage = compose(bgImage: cameraImage, overlayImage: self.textImage)
-
-        var pixelBuffer: CVPixelBuffer?
-
-        _ = CVPixelBufferCreate(
-            kCFAllocatorDefault,
-            Int(compositedImage.extent.size.width),
-            Int(compositedImage.extent.height),
-            kCVPixelFormatType_32BGRA,
-            self.CVPixelBufferCreateOptions as CFDictionary,
-            &pixelBuffer
-        )
-
-        if let pixelBuffer = pixelBuffer {
-            context.render(compositedImage, to: pixelBuffer)
-            delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
-        }
+        
+//        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+//        delegate?.videoComposer(self, didComposeImageBuffer: imageBuffer)
+////        self.count += 1
+////        self.textImage = self.makeTextCIImage(text: String(self.count))
+//        let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+//        CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0));
+//        let int32Buffer = unsafeBitCast(CVPixelBufferGetBaseAddress(pixelBuffer), to: UnsafeMutablePointer<UInt32>.self)
+//        let int32PerRow = CVPixelBufferGetBytesPerRow(pixelBuffer)
+//        // Get BGRA value for pixel (43, 17)
+//        let luma: UInt32 = int32Buffer[17 * int32PerRow + 43]
+//
+//        CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+//
+//        self.textImage = self.makeTextCIImage(text: String(luma))
+//
+////        delegate?.videoComposer(self, didComposeImageBuffer: imageBuffer)
+////
+//        let cameraImage = CIImage(cvImageBuffer: pixelBuffer)
+//        let compositedImage = compose(bgImage: cameraImage, overlayImage: self.textImage)
+//
+//        var pixelBuffer2: CVPixelBuffer?
+//
+//        _ = CVPixelBufferCreate(
+//            kCFAllocatorDefault,
+//            Int(compositedImage.extent.size.width),
+//            Int(compositedImage.extent.height),
+//            kCVPixelFormatType_32BGRA,
+//            self.CVPixelBufferCreateOptions as CFDictionary,
+//            &pixelBuffer2
+//        )
+//
+//        if let pixelBuffer2 = pixelBuffer2 {
+//            context.render(compositedImage, to: pixelBuffer2)
+//            delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer2)
+//        }
+    }
+    
+    func didSwitchEffect(_ slot: String!) {
+        self.textImage = self.makeTextCIImage(text: "SWITCHED EFFECT")
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if output == cameraCapture.output {
-            
-            self.deepAR.enqueueCameraFrame(sampleBuffer, mirror: false)
+            let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+            CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0));
+            self.deepAR?.processFrameAndReturn(pixelBuffer, outputBuffer: pixelBuffer, mirror: false, orientation: 0)
+
+            let int32Buffer = unsafeBitCast(CVPixelBufferGetBaseAddress(pixelBuffer), to: UnsafeMutablePointer<UInt32>.self)
+            let int32PerRow = CVPixelBufferGetBytesPerRow(pixelBuffer)
+            // Get BGRA value for pixel (43, 17)
+            let luma: UInt32 = int32Buffer[17 * int32PerRow + 10]
+
+            CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+            delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
+
+//            guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+//
+//            let cameraImage = CIImage(cvImageBuffer: imageBuffer)
+//
+//            var pixelBuffer: CVPixelBuffer?
+//
+//              _ = CVPixelBufferCreate(
+//                  kCFAllocatorDefault,
+//                  Int(cameraImage.extent.size.width),
+//                  Int(cameraImage.extent.height),
+//                  kCVPixelFormatType_32BGRA,
+//                  self.CVPixelBufferCreateOptions as CFDictionary,
+//                  &pixelBuffer
+//              )
+//
+//          if let pixelBuffer = pixelBuffer {
+//            context.render(cameraImage, to: pixelBuffer)
+////            delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
+//            self.deepAR?.processFrame(pixelBuffer, mirror: false, orientation: 0)
+//          }
+//            let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+//            CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0));
+//            let int32Buffer = unsafeBitCast(CVPixelBufferGetBaseAddress(pixelBuffer), to: UnsafeMutablePointer<UInt32>.self)
+//            let int32PerRow = CVPixelBufferGetBytesPerRow(pixelBuffer)
+//            // Get BGRA value for pixel (43, 17)
+//            let luma: UInt32 = int32Buffer[17 * int32PerRow + 43]
+//
+//            CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+//
+//            self.textImage = self.makeTextCIImage(text: String(luma))
+//            self.deepAR.enqueueCameraFrame(sampleBuffer, mirror: false)
 //            guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
 //
 //            let cameraImage = CIImage(cvImageBuffer: imageBuffer)
@@ -110,6 +177,7 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
 //
 //            if let pixelBuffer = pixelBuffer {
 //                context.render(compositedImage, to: pixelBuffer)
+////                self.deepAR.processFrame(pixelBuffer, mirror: false, orientation: 0)
 //                delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
 //            }
         }
