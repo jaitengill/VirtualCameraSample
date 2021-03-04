@@ -27,40 +27,90 @@
 		ABB04EB225194A7D0038D75C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB04EAF25194A7D0038D75C /* Config.swift */; };
 		ABB04EB325194A7D0038D75C /* SettingsPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB04EB025194A7D0038D75C /* SettingsPasteboard.swift */; };
 		ABB04EB425194A7D0038D75C /* SettingsPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB04EB025194A7D0038D75C /* SettingsPasteboard.swift */; };
-		FA4075F025E5491C0043F32F /* fire in Resources */ = {isa = PBXBuildFile; fileRef = FA4075EF25E5491C0043F32F /* fire */; };
 		FA4075F925E54AE90043F32F /* DeepAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4075DD25E53E0E0043F32F /* DeepAR.framework */; };
 		FA4075FA25E54AE90043F32F /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA4075DD25E53E0E0043F32F /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FAAA7D5A25E804F300D6FEE0 /* twistedFace in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D3E25E804F300D6FEE0 /* twistedFace */; };
-		FAAA7D5B25E804F300D6FEE0 /* sleepingmask in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D3F25E804F300D6FEE0 /* sleepingmask */; };
-		FAAA7D5C25E804F300D6FEE0 /* dalmatian in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4025E804F300D6FEE0 /* dalmatian */; };
-		FAAA7D5D25E804F300D6FEE0 /* rain in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4125E804F300D6FEE0 /* rain */; };
-		FAAA7D5E25E804F300D6FEE0 /* drawingmanga in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4225E804F300D6FEE0 /* drawingmanga */; };
-		FAAA7D5F25E804F300D6FEE0 /* grumpycat in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4325E804F300D6FEE0 /* grumpycat */; };
-		FAAA7D6025E804F300D6FEE0 /* tv80 in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4425E804F300D6FEE0 /* tv80 */; };
-		FAAA7D6125E804F300D6FEE0 /* heart in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4525E804F300D6FEE0 /* heart */; };
-		FAAA7D6225E804F300D6FEE0 /* bleachbypass in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4625E804F300D6FEE0 /* bleachbypass */; };
-		FAAA7D6325E804F400D6FEE0 /* flowers in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4725E804F300D6FEE0 /* flowers */; };
-		FAAA7D6425E804F400D6FEE0 /* pug in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4825E804F300D6FEE0 /* pug */; };
-		FAAA7D6525E804F400D6FEE0 /* blizzard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4925E804F300D6FEE0 /* blizzard */; };
-		FAAA7D6625E804F400D6FEE0 /* realvhs in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4A25E804F300D6FEE0 /* realvhs */; };
-		FAAA7D6725E804F400D6FEE0 /* fatify in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4B25E804F300D6FEE0 /* fatify */; };
-		FAAA7D6825E804F400D6FEE0 /* tripleface in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4C25E804F300D6FEE0 /* tripleface */; };
-		FAAA7D6925E804F400D6FEE0 /* sepia in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4D25E804F300D6FEE0 /* sepia */; };
-		FAAA7D6A25E804F400D6FEE0 /* slash in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4E25E804F300D6FEE0 /* slash */; };
-		FAAA7D6B25E804F400D6FEE0 /* teddycigar in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D4F25E804F300D6FEE0 /* teddycigar */; };
-		FAAA7D6C25E804F400D6FEE0 /* smallface in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5025E804F300D6FEE0 /* smallface */; };
-		FAAA7D6D25E804F400D6FEE0 /* fire in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5125E804F300D6FEE0 /* fire */; };
-		FAAA7D6E25E804F400D6FEE0 /* kanye in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5225E804F300D6FEE0 /* kanye */; };
-		FAAA7D6F25E804F400D6FEE0 /* mudMask in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5325E804F300D6FEE0 /* mudMask */; };
-		FAAA7D7025E804F400D6FEE0 /* aviators in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5425E804F300D6FEE0 /* aviators */; };
-		FAAA7D7125E804F400D6FEE0 /* obama in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5525E804F300D6FEE0 /* obama */; };
-		FAAA7D7225E804F400D6FEE0 /* filmcolorperfection in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5625E804F300D6FEE0 /* filmcolorperfection */; };
-		FAAA7D7325E804F400D6FEE0 /* koala in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5725E804F300D6FEE0 /* koala */; };
-		FAAA7D7425E804F400D6FEE0 /* bigmouth in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5825E804F300D6FEE0 /* bigmouth */; };
-		FAAA7D7525E804F400D6FEE0 /* lion in Resources */ = {isa = PBXBuildFile; fileRef = FAAA7D5925E804F300D6FEE0 /* lion */; };
 		FAEB5B7A25E55756009273E7 /* DeepAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4075DD25E53E0E0043F32F /* DeepAR.framework */; };
 		FAEB5B7B25E55756009273E7 /* DeepAR.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA4075DD25E53E0E0043F32F /* DeepAR.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FAEB5B7E25E65303009273E7 /* SampleComposerObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEB5B7D25E65303009273E7 /* SampleComposerObj.swift */; };
+		FAF2D26325EFA195003EEEA5 /* FilterCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2D26225EFA195003EEEA5 /* FilterCollectionViewItem.swift */; };
+		FAF2D26525EFA270003EEEA5 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2D26425EFA270003EEEA5 /* Filters.swift */; };
+		FAF2D26725EFA3BA003EEEA5 /* FilterObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2D26625EFA3BA003EEEA5 /* FilterObject.swift */; };
+		FAF2D27125EFBE1F003EEEA5 /* FilterCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27025EFBE1F003EEEA5 /* FilterCollectionViewItem.xib */; };
+		FAF2D27325EFC83D003EEEA5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2D27225EFC83D003EEEA5 /* SettingsViewController.swift */; };
+		FAF2D29925EFD137003EEEA5 /* glitter in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27425EFD136003EEEA5 /* glitter */; };
+		FAF2D29A25EFD137003EEEA5 /* night_rider in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27525EFD136003EEEA5 /* night_rider */; };
+		FAF2D29B25EFD137003EEEA5 /* velvet in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27625EFD136003EEEA5 /* velvet */; };
+		FAF2D29C25EFD137003EEEA5 /* blue_laser in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27725EFD136003EEEA5 /* blue_laser */; };
+		FAF2D29D25EFD137003EEEA5 /* glitch in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27825EFD136003EEEA5 /* glitch */; };
+		FAF2D29E25EFD137003EEEA5 /* trident_splash in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27925EFD136003EEEA5 /* trident_splash */; };
+		FAF2D29F25EFD137003EEEA5 /* trippy in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27A25EFD136003EEEA5 /* trippy */; };
+		FAF2D2A025EFD137003EEEA5 /* night_vision in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27B25EFD136003EEEA5 /* night_vision */; };
+		FAF2D2A125EFD137003EEEA5 /* mad_max in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27C25EFD136003EEEA5 /* mad_max */; };
+		FAF2D2A225EFD137003EEEA5 /* vhs in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27D25EFD136003EEEA5 /* vhs */; };
+		FAF2D2A325EFD137003EEEA5 /* caustics in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27E25EFD137003EEEA5 /* caustics */; };
+		FAF2D2A425EFD137003EEEA5 /* displaced_glow in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D27F25EFD137003EEEA5 /* displaced_glow */; };
+		FAF2D2A525EFD137003EEEA5 /* old_film_dust in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28025EFD137003EEEA5 /* old_film_dust */; };
+		FAF2D2A625EFD137003EEEA5 /* glitch_v2 in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28125EFD137003EEEA5 /* glitch_v2 */; };
+		FAF2D2A725EFD137003EEEA5 /* dreamy_bloom in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28225EFD137003EEEA5 /* dreamy_bloom */; };
+		FAF2D2A825EFD137003EEEA5 /* club_party_lights in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28325EFD137003EEEA5 /* club_party_lights */; };
+		FAF2D2A925EFD137003EEEA5 /* stars in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28425EFD137003EEEA5 /* stars */; };
+		FAF2D2AA25EFD137003EEEA5 /* super_grainy in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28525EFD137003EEEA5 /* super_grainy */; };
+		FAF2D2AB25EFD137003EEEA5 /* overlay_fire in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28625EFD137003EEEA5 /* overlay_fire */; };
+		FAF2D2AC25EFD137003EEEA5 /* lens_flare in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28725EFD137003EEEA5 /* lens_flare */; };
+		FAF2D2AD25EFD137003EEEA5 /* bone in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28825EFD137003EEEA5 /* bone */; };
+		FAF2D2AE25EFD137003EEEA5 /* chromatic_aberration in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28925EFD137003EEEA5 /* chromatic_aberration */; };
+		FAF2D2AF25EFD137003EEEA5 /* static_strong in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28A25EFD137003EEEA5 /* static_strong */; };
+		FAF2D2B025EFD137003EEEA5 /* matrix in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28B25EFD137003EEEA5 /* matrix */; };
+		FAF2D2B125EFD137003EEEA5 /* blood_moon in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28C25EFD137003EEEA5 /* blood_moon */; };
+		FAF2D2B225EFD137003EEEA5 /* cyber_ghost in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28D25EFD137003EEEA5 /* cyber_ghost */; };
+		FAF2D2B325EFD137003EEEA5 /* bubble_gum in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28E25EFD137003EEEA5 /* bubble_gum */; };
+		FAF2D2B425EFD137003EEEA5 /* green_laser in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D28F25EFD137003EEEA5 /* green_laser */; };
+		FAF2D2B525EFD137003EEEA5 /* green_vision in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29025EFD137003EEEA5 /* green_vision */; };
+		FAF2D2B625EFD137003EEEA5 /* old_film in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29125EFD137003EEEA5 /* old_film */; };
+		FAF2D2B725EFD137003EEEA5 /* glowygoo in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29225EFD137003EEEA5 /* glowygoo */; };
+		FAF2D2B825EFD137003EEEA5 /* fireflies in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29325EFD137003EEEA5 /* fireflies */; };
+		FAF2D2B925EFD137003EEEA5 /* thermal_vision in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29425EFD137003EEEA5 /* thermal_vision */; };
+		FAF2D2BA25EFD137003EEEA5 /* smoke in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29525EFD137003EEEA5 /* smoke */; };
+		FAF2D2BB25EFD137003EEEA5 /* velvet-2 in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29625EFD137003EEEA5 /* velvet-2 */; };
+		FAF2D2BC25EFD137003EEEA5 /* static in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29725EFD137003EEEA5 /* static */; };
+		FAF2D2BD25EFD137003EEEA5 /* b&w in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D29825EFD137003EEEA5 /* b&w */; };
+		FAF2D2E325EFF202003EEEA5 /* overlay_fire in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2BE25EFF201003EEEA5 /* overlay_fire */; };
+		FAF2D2E425EFF202003EEEA5 /* club_party_lights in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2BF25EFF201003EEEA5 /* club_party_lights */; };
+		FAF2D2E525EFF202003EEEA5 /* cyber_ghost in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C025EFF201003EEEA5 /* cyber_ghost */; };
+		FAF2D2E625EFF202003EEEA5 /* chromatic_aberration in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C125EFF201003EEEA5 /* chromatic_aberration */; };
+		FAF2D2E725EFF202003EEEA5 /* glowygoo in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C225EFF201003EEEA5 /* glowygoo */; };
+		FAF2D2E825EFF202003EEEA5 /* b&w in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C325EFF201003EEEA5 /* b&w */; };
+		FAF2D2E925EFF202003EEEA5 /* green_laser in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C425EFF201003EEEA5 /* green_laser */; };
+		FAF2D2EA25EFF202003EEEA5 /* lens_flare in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C525EFF201003EEEA5 /* lens_flare */; };
+		FAF2D2EB25EFF202003EEEA5 /* green_vision in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C625EFF201003EEEA5 /* green_vision */; };
+		FAF2D2EC25EFF202003EEEA5 /* smoke in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C725EFF201003EEEA5 /* smoke */; };
+		FAF2D2ED25EFF202003EEEA5 /* trident_splash in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C825EFF201003EEEA5 /* trident_splash */; };
+		FAF2D2EE25EFF202003EEEA5 /* velvet in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2C925EFF201003EEEA5 /* velvet */; };
+		FAF2D2EF25EFF202003EEEA5 /* glitch in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2CA25EFF201003EEEA5 /* glitch */; };
+		FAF2D2F025EFF202003EEEA5 /* old_film_dust in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2CB25EFF201003EEEA5 /* old_film_dust */; };
+		FAF2D2F125EFF202003EEEA5 /* vhs in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2CC25EFF201003EEEA5 /* vhs */; };
+		FAF2D2F225EFF202003EEEA5 /* caustics in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2CD25EFF201003EEEA5 /* caustics */; };
+		FAF2D2F325EFF202003EEEA5 /* displaced_glow in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2CE25EFF201003EEEA5 /* displaced_glow */; };
+		FAF2D2F425EFF202003EEEA5 /* mad_max in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2CF25EFF201003EEEA5 /* mad_max */; };
+		FAF2D2F525EFF202003EEEA5 /* velvet-2 in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D025EFF201003EEEA5 /* velvet-2 */; };
+		FAF2D2F625EFF202003EEEA5 /* glitch_v2 in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D125EFF201003EEEA5 /* glitch_v2 */; };
+		FAF2D2F725EFF202003EEEA5 /* bubble_gum in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D225EFF201003EEEA5 /* bubble_gum */; };
+		FAF2D2F825EFF202003EEEA5 /* bone in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D325EFF202003EEEA5 /* bone */; };
+		FAF2D2F925EFF202003EEEA5 /* super_grainy in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D425EFF202003EEEA5 /* super_grainy */; };
+		FAF2D2FA25EFF202003EEEA5 /* night_rider in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D525EFF202003EEEA5 /* night_rider */; };
+		FAF2D2FB25EFF202003EEEA5 /* thermal_vision in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D625EFF202003EEEA5 /* thermal_vision */; };
+		FAF2D2FC25EFF202003EEEA5 /* fireflies in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D725EFF202003EEEA5 /* fireflies */; };
+		FAF2D2FD25EFF202003EEEA5 /* dreamy_bloom in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D825EFF202003EEEA5 /* dreamy_bloom */; };
+		FAF2D2FE25EFF202003EEEA5 /* blood_moon in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2D925EFF202003EEEA5 /* blood_moon */; };
+		FAF2D2FF25EFF202003EEEA5 /* static in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2DA25EFF202003EEEA5 /* static */; };
+		FAF2D30025EFF202003EEEA5 /* trippy in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2DB25EFF202003EEEA5 /* trippy */; };
+		FAF2D30125EFF202003EEEA5 /* matrix in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2DC25EFF202003EEEA5 /* matrix */; };
+		FAF2D30225EFF202003EEEA5 /* night_vision in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2DD25EFF202003EEEA5 /* night_vision */; };
+		FAF2D30325EFF202003EEEA5 /* old_film in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2DE25EFF202003EEEA5 /* old_film */; };
+		FAF2D30425EFF202003EEEA5 /* blue_laser in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2DF25EFF202003EEEA5 /* blue_laser */; };
+		FAF2D30525EFF202003EEEA5 /* stars in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2E025EFF202003EEEA5 /* stars */; };
+		FAF2D30625EFF202003EEEA5 /* static_strong in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2E125EFF202003EEEA5 /* static_strong */; };
+		FAF2D30725EFF202003EEEA5 /* glitter in Resources */ = {isa = PBXBuildFile; fileRef = FAF2D2E225EFF202003EEEA5 /* glitter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -115,37 +165,87 @@
 		ABB04EB025194A7D0038D75C /* SettingsPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPasteboard.swift; sourceTree = "<group>"; };
 		FA4075D425E539FB0043F32F /* DeepAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeepAR.framework; path = "../../Downloads/DeepAR-MacOS-v2-2.3/lib/DeepAR.framework"; sourceTree = "<group>"; };
 		FA4075DD25E53E0E0043F32F /* DeepAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DeepAR.framework; sourceTree = "<group>"; };
-		FA4075EF25E5491C0043F32F /* fire */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire; sourceTree = "<group>"; };
-		FAAA7D3E25E804F300D6FEE0 /* twistedFace */ = {isa = PBXFileReference; lastKnownFileType = file; path = twistedFace; sourceTree = "<group>"; };
-		FAAA7D3F25E804F300D6FEE0 /* sleepingmask */ = {isa = PBXFileReference; lastKnownFileType = file; path = sleepingmask; sourceTree = "<group>"; };
-		FAAA7D4025E804F300D6FEE0 /* dalmatian */ = {isa = PBXFileReference; lastKnownFileType = file; path = dalmatian; sourceTree = "<group>"; };
-		FAAA7D4125E804F300D6FEE0 /* rain */ = {isa = PBXFileReference; lastKnownFileType = file; path = rain; sourceTree = "<group>"; };
-		FAAA7D4225E804F300D6FEE0 /* drawingmanga */ = {isa = PBXFileReference; lastKnownFileType = file; path = drawingmanga; sourceTree = "<group>"; };
-		FAAA7D4325E804F300D6FEE0 /* grumpycat */ = {isa = PBXFileReference; lastKnownFileType = file; path = grumpycat; sourceTree = "<group>"; };
-		FAAA7D4425E804F300D6FEE0 /* tv80 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tv80; sourceTree = "<group>"; };
-		FAAA7D4525E804F300D6FEE0 /* heart */ = {isa = PBXFileReference; lastKnownFileType = file; path = heart; sourceTree = "<group>"; };
-		FAAA7D4625E804F300D6FEE0 /* bleachbypass */ = {isa = PBXFileReference; lastKnownFileType = file; path = bleachbypass; sourceTree = "<group>"; };
-		FAAA7D4725E804F300D6FEE0 /* flowers */ = {isa = PBXFileReference; lastKnownFileType = file; path = flowers; sourceTree = "<group>"; };
-		FAAA7D4825E804F300D6FEE0 /* pug */ = {isa = PBXFileReference; lastKnownFileType = file; path = pug; sourceTree = "<group>"; };
-		FAAA7D4925E804F300D6FEE0 /* blizzard */ = {isa = PBXFileReference; lastKnownFileType = file; path = blizzard; sourceTree = "<group>"; };
-		FAAA7D4A25E804F300D6FEE0 /* realvhs */ = {isa = PBXFileReference; lastKnownFileType = file; path = realvhs; sourceTree = "<group>"; };
-		FAAA7D4B25E804F300D6FEE0 /* fatify */ = {isa = PBXFileReference; lastKnownFileType = file; path = fatify; sourceTree = "<group>"; };
-		FAAA7D4C25E804F300D6FEE0 /* tripleface */ = {isa = PBXFileReference; lastKnownFileType = file; path = tripleface; sourceTree = "<group>"; };
-		FAAA7D4D25E804F300D6FEE0 /* sepia */ = {isa = PBXFileReference; lastKnownFileType = file; path = sepia; sourceTree = "<group>"; };
-		FAAA7D4E25E804F300D6FEE0 /* slash */ = {isa = PBXFileReference; lastKnownFileType = file; path = slash; sourceTree = "<group>"; };
-		FAAA7D4F25E804F300D6FEE0 /* teddycigar */ = {isa = PBXFileReference; lastKnownFileType = file; path = teddycigar; sourceTree = "<group>"; };
-		FAAA7D5025E804F300D6FEE0 /* smallface */ = {isa = PBXFileReference; lastKnownFileType = file; path = smallface; sourceTree = "<group>"; };
-		FAAA7D5125E804F300D6FEE0 /* fire */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire; sourceTree = "<group>"; };
-		FAAA7D5225E804F300D6FEE0 /* kanye */ = {isa = PBXFileReference; lastKnownFileType = file; path = kanye; sourceTree = "<group>"; };
-		FAAA7D5325E804F300D6FEE0 /* mudMask */ = {isa = PBXFileReference; lastKnownFileType = file; path = mudMask; sourceTree = "<group>"; };
-		FAAA7D5425E804F300D6FEE0 /* aviators */ = {isa = PBXFileReference; lastKnownFileType = file; path = aviators; sourceTree = "<group>"; };
-		FAAA7D5525E804F300D6FEE0 /* obama */ = {isa = PBXFileReference; lastKnownFileType = file; path = obama; sourceTree = "<group>"; };
-		FAAA7D5625E804F300D6FEE0 /* filmcolorperfection */ = {isa = PBXFileReference; lastKnownFileType = file; path = filmcolorperfection; sourceTree = "<group>"; };
-		FAAA7D5725E804F300D6FEE0 /* koala */ = {isa = PBXFileReference; lastKnownFileType = file; path = koala; sourceTree = "<group>"; };
-		FAAA7D5825E804F300D6FEE0 /* bigmouth */ = {isa = PBXFileReference; lastKnownFileType = file; path = bigmouth; sourceTree = "<group>"; };
-		FAAA7D5925E804F300D6FEE0 /* lion */ = {isa = PBXFileReference; lastKnownFileType = file; path = lion; sourceTree = "<group>"; };
 		FAEB5B7825E556F8009273E7 /* VirtualCameraSampleController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VirtualCameraSampleController-Bridging-Header.h"; sourceTree = "<group>"; };
 		FAEB5B7D25E65303009273E7 /* SampleComposerObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleComposerObj.swift; sourceTree = "<group>"; };
+		FAF2D26225EFA195003EEEA5 /* FilterCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewItem.swift; sourceTree = "<group>"; };
+		FAF2D26425EFA270003EEEA5 /* Filters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		FAF2D26625EFA3BA003EEEA5 /* FilterObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterObject.swift; sourceTree = "<group>"; };
+		FAF2D27025EFBE1F003EEEA5 /* FilterCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCollectionViewItem.xib; sourceTree = "<group>"; };
+		FAF2D27225EFC83D003EEEA5 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FAF2D27425EFD136003EEEA5 /* glitter */ = {isa = PBXFileReference; lastKnownFileType = file; path = glitter; sourceTree = "<group>"; };
+		FAF2D27525EFD136003EEEA5 /* night_rider */ = {isa = PBXFileReference; lastKnownFileType = file; path = night_rider; sourceTree = "<group>"; };
+		FAF2D27625EFD136003EEEA5 /* velvet */ = {isa = PBXFileReference; lastKnownFileType = file; path = velvet; sourceTree = "<group>"; };
+		FAF2D27725EFD136003EEEA5 /* blue_laser */ = {isa = PBXFileReference; lastKnownFileType = file; path = blue_laser; sourceTree = "<group>"; };
+		FAF2D27825EFD136003EEEA5 /* glitch */ = {isa = PBXFileReference; lastKnownFileType = file; path = glitch; sourceTree = "<group>"; };
+		FAF2D27925EFD136003EEEA5 /* trident_splash */ = {isa = PBXFileReference; lastKnownFileType = file; path = trident_splash; sourceTree = "<group>"; };
+		FAF2D27A25EFD136003EEEA5 /* trippy */ = {isa = PBXFileReference; lastKnownFileType = file; path = trippy; sourceTree = "<group>"; };
+		FAF2D27B25EFD136003EEEA5 /* night_vision */ = {isa = PBXFileReference; lastKnownFileType = file; path = night_vision; sourceTree = "<group>"; };
+		FAF2D27C25EFD136003EEEA5 /* mad_max */ = {isa = PBXFileReference; lastKnownFileType = file; path = mad_max; sourceTree = "<group>"; };
+		FAF2D27D25EFD136003EEEA5 /* vhs */ = {isa = PBXFileReference; lastKnownFileType = file; path = vhs; sourceTree = "<group>"; };
+		FAF2D27E25EFD137003EEEA5 /* caustics */ = {isa = PBXFileReference; lastKnownFileType = file; path = caustics; sourceTree = "<group>"; };
+		FAF2D27F25EFD137003EEEA5 /* displaced_glow */ = {isa = PBXFileReference; lastKnownFileType = file; path = displaced_glow; sourceTree = "<group>"; };
+		FAF2D28025EFD137003EEEA5 /* old_film_dust */ = {isa = PBXFileReference; lastKnownFileType = file; path = old_film_dust; sourceTree = "<group>"; };
+		FAF2D28125EFD137003EEEA5 /* glitch_v2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = glitch_v2; sourceTree = "<group>"; };
+		FAF2D28225EFD137003EEEA5 /* dreamy_bloom */ = {isa = PBXFileReference; lastKnownFileType = file; path = dreamy_bloom; sourceTree = "<group>"; };
+		FAF2D28325EFD137003EEEA5 /* club_party_lights */ = {isa = PBXFileReference; lastKnownFileType = file; path = club_party_lights; sourceTree = "<group>"; };
+		FAF2D28425EFD137003EEEA5 /* stars */ = {isa = PBXFileReference; lastKnownFileType = file; path = stars; sourceTree = "<group>"; };
+		FAF2D28525EFD137003EEEA5 /* super_grainy */ = {isa = PBXFileReference; lastKnownFileType = file; path = super_grainy; sourceTree = "<group>"; };
+		FAF2D28625EFD137003EEEA5 /* overlay_fire */ = {isa = PBXFileReference; lastKnownFileType = file; path = overlay_fire; sourceTree = "<group>"; };
+		FAF2D28725EFD137003EEEA5 /* lens_flare */ = {isa = PBXFileReference; lastKnownFileType = file; path = lens_flare; sourceTree = "<group>"; };
+		FAF2D28825EFD137003EEEA5 /* bone */ = {isa = PBXFileReference; lastKnownFileType = file; path = bone; sourceTree = "<group>"; };
+		FAF2D28925EFD137003EEEA5 /* chromatic_aberration */ = {isa = PBXFileReference; lastKnownFileType = file; path = chromatic_aberration; sourceTree = "<group>"; };
+		FAF2D28A25EFD137003EEEA5 /* static_strong */ = {isa = PBXFileReference; lastKnownFileType = file; path = static_strong; sourceTree = "<group>"; };
+		FAF2D28B25EFD137003EEEA5 /* matrix */ = {isa = PBXFileReference; lastKnownFileType = file; path = matrix; sourceTree = "<group>"; };
+		FAF2D28C25EFD137003EEEA5 /* blood_moon */ = {isa = PBXFileReference; lastKnownFileType = file; path = blood_moon; sourceTree = "<group>"; };
+		FAF2D28D25EFD137003EEEA5 /* cyber_ghost */ = {isa = PBXFileReference; lastKnownFileType = file; path = cyber_ghost; sourceTree = "<group>"; };
+		FAF2D28E25EFD137003EEEA5 /* bubble_gum */ = {isa = PBXFileReference; lastKnownFileType = file; path = bubble_gum; sourceTree = "<group>"; };
+		FAF2D28F25EFD137003EEEA5 /* green_laser */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_laser; sourceTree = "<group>"; };
+		FAF2D29025EFD137003EEEA5 /* green_vision */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_vision; sourceTree = "<group>"; };
+		FAF2D29125EFD137003EEEA5 /* old_film */ = {isa = PBXFileReference; lastKnownFileType = file; path = old_film; sourceTree = "<group>"; };
+		FAF2D29225EFD137003EEEA5 /* glowygoo */ = {isa = PBXFileReference; lastKnownFileType = file; path = glowygoo; sourceTree = "<group>"; };
+		FAF2D29325EFD137003EEEA5 /* fireflies */ = {isa = PBXFileReference; lastKnownFileType = file; path = fireflies; sourceTree = "<group>"; };
+		FAF2D29425EFD137003EEEA5 /* thermal_vision */ = {isa = PBXFileReference; lastKnownFileType = file; path = thermal_vision; sourceTree = "<group>"; };
+		FAF2D29525EFD137003EEEA5 /* smoke */ = {isa = PBXFileReference; lastKnownFileType = file; path = smoke; sourceTree = "<group>"; };
+		FAF2D29625EFD137003EEEA5 /* velvet-2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "velvet-2"; sourceTree = "<group>"; };
+		FAF2D29725EFD137003EEEA5 /* static */ = {isa = PBXFileReference; lastKnownFileType = file; path = static; sourceTree = "<group>"; };
+		FAF2D29825EFD137003EEEA5 /* b&w */ = {isa = PBXFileReference; lastKnownFileType = file; path = "b&w"; sourceTree = "<group>"; };
+		FAF2D2BE25EFF201003EEEA5 /* overlay_fire */ = {isa = PBXFileReference; lastKnownFileType = file; path = overlay_fire; sourceTree = "<group>"; };
+		FAF2D2BF25EFF201003EEEA5 /* club_party_lights */ = {isa = PBXFileReference; lastKnownFileType = file; path = club_party_lights; sourceTree = "<group>"; };
+		FAF2D2C025EFF201003EEEA5 /* cyber_ghost */ = {isa = PBXFileReference; lastKnownFileType = file; path = cyber_ghost; sourceTree = "<group>"; };
+		FAF2D2C125EFF201003EEEA5 /* chromatic_aberration */ = {isa = PBXFileReference; lastKnownFileType = file; path = chromatic_aberration; sourceTree = "<group>"; };
+		FAF2D2C225EFF201003EEEA5 /* glowygoo */ = {isa = PBXFileReference; lastKnownFileType = file; path = glowygoo; sourceTree = "<group>"; };
+		FAF2D2C325EFF201003EEEA5 /* b&w */ = {isa = PBXFileReference; lastKnownFileType = file; path = "b&w"; sourceTree = "<group>"; };
+		FAF2D2C425EFF201003EEEA5 /* green_laser */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_laser; sourceTree = "<group>"; };
+		FAF2D2C525EFF201003EEEA5 /* lens_flare */ = {isa = PBXFileReference; lastKnownFileType = file; path = lens_flare; sourceTree = "<group>"; };
+		FAF2D2C625EFF201003EEEA5 /* green_vision */ = {isa = PBXFileReference; lastKnownFileType = file; path = green_vision; sourceTree = "<group>"; };
+		FAF2D2C725EFF201003EEEA5 /* smoke */ = {isa = PBXFileReference; lastKnownFileType = file; path = smoke; sourceTree = "<group>"; };
+		FAF2D2C825EFF201003EEEA5 /* trident_splash */ = {isa = PBXFileReference; lastKnownFileType = file; path = trident_splash; sourceTree = "<group>"; };
+		FAF2D2C925EFF201003EEEA5 /* velvet */ = {isa = PBXFileReference; lastKnownFileType = file; path = velvet; sourceTree = "<group>"; };
+		FAF2D2CA25EFF201003EEEA5 /* glitch */ = {isa = PBXFileReference; lastKnownFileType = file; path = glitch; sourceTree = "<group>"; };
+		FAF2D2CB25EFF201003EEEA5 /* old_film_dust */ = {isa = PBXFileReference; lastKnownFileType = file; path = old_film_dust; sourceTree = "<group>"; };
+		FAF2D2CC25EFF201003EEEA5 /* vhs */ = {isa = PBXFileReference; lastKnownFileType = file; path = vhs; sourceTree = "<group>"; };
+		FAF2D2CD25EFF201003EEEA5 /* caustics */ = {isa = PBXFileReference; lastKnownFileType = file; path = caustics; sourceTree = "<group>"; };
+		FAF2D2CE25EFF201003EEEA5 /* displaced_glow */ = {isa = PBXFileReference; lastKnownFileType = file; path = displaced_glow; sourceTree = "<group>"; };
+		FAF2D2CF25EFF201003EEEA5 /* mad_max */ = {isa = PBXFileReference; lastKnownFileType = file; path = mad_max; sourceTree = "<group>"; };
+		FAF2D2D025EFF201003EEEA5 /* velvet-2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "velvet-2"; sourceTree = "<group>"; };
+		FAF2D2D125EFF201003EEEA5 /* glitch_v2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = glitch_v2; sourceTree = "<group>"; };
+		FAF2D2D225EFF201003EEEA5 /* bubble_gum */ = {isa = PBXFileReference; lastKnownFileType = file; path = bubble_gum; sourceTree = "<group>"; };
+		FAF2D2D325EFF202003EEEA5 /* bone */ = {isa = PBXFileReference; lastKnownFileType = file; path = bone; sourceTree = "<group>"; };
+		FAF2D2D425EFF202003EEEA5 /* super_grainy */ = {isa = PBXFileReference; lastKnownFileType = file; path = super_grainy; sourceTree = "<group>"; };
+		FAF2D2D525EFF202003EEEA5 /* night_rider */ = {isa = PBXFileReference; lastKnownFileType = file; path = night_rider; sourceTree = "<group>"; };
+		FAF2D2D625EFF202003EEEA5 /* thermal_vision */ = {isa = PBXFileReference; lastKnownFileType = file; path = thermal_vision; sourceTree = "<group>"; };
+		FAF2D2D725EFF202003EEEA5 /* fireflies */ = {isa = PBXFileReference; lastKnownFileType = file; path = fireflies; sourceTree = "<group>"; };
+		FAF2D2D825EFF202003EEEA5 /* dreamy_bloom */ = {isa = PBXFileReference; lastKnownFileType = file; path = dreamy_bloom; sourceTree = "<group>"; };
+		FAF2D2D925EFF202003EEEA5 /* blood_moon */ = {isa = PBXFileReference; lastKnownFileType = file; path = blood_moon; sourceTree = "<group>"; };
+		FAF2D2DA25EFF202003EEEA5 /* static */ = {isa = PBXFileReference; lastKnownFileType = file; path = static; sourceTree = "<group>"; };
+		FAF2D2DB25EFF202003EEEA5 /* trippy */ = {isa = PBXFileReference; lastKnownFileType = file; path = trippy; sourceTree = "<group>"; };
+		FAF2D2DC25EFF202003EEEA5 /* matrix */ = {isa = PBXFileReference; lastKnownFileType = file; path = matrix; sourceTree = "<group>"; };
+		FAF2D2DD25EFF202003EEEA5 /* night_vision */ = {isa = PBXFileReference; lastKnownFileType = file; path = night_vision; sourceTree = "<group>"; };
+		FAF2D2DE25EFF202003EEEA5 /* old_film */ = {isa = PBXFileReference; lastKnownFileType = file; path = old_film; sourceTree = "<group>"; };
+		FAF2D2DF25EFF202003EEEA5 /* blue_laser */ = {isa = PBXFileReference; lastKnownFileType = file; path = blue_laser; sourceTree = "<group>"; };
+		FAF2D2E025EFF202003EEEA5 /* stars */ = {isa = PBXFileReference; lastKnownFileType = file; path = stars; sourceTree = "<group>"; };
+		FAF2D2E125EFF202003EEEA5 /* static_strong */ = {isa = PBXFileReference; lastKnownFileType = file; path = static_strong; sourceTree = "<group>"; };
+		FAF2D2E225EFF202003EEEA5 /* glitter */ = {isa = PBXFileReference; lastKnownFileType = file; path = glitter; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,16 +313,21 @@
 		ABB04E7D2515A8140038D75C /* VirtualCameraSampleController */ = {
 			isa = PBXGroup;
 			children = (
+				FAF2D26125EFA180003EEEA5 /* FilterCollection */,
 				FAAA7D3D25E804F300D6FEE0 /* Effects */,
 				ABB04E7E2515A8140038D75C /* AppDelegate.swift */,
 				ABB04E802515A8140038D75C /* ViewController.swift */,
 				ABB04E9C25162D310038D75C /* WindowController.swift */,
 				ABB04E822515A8160038D75C /* Assets.xcassets */,
 				ABB04E842515A8160038D75C /* Main.storyboard */,
+				FAF2D27025EFBE1F003EEEA5 /* FilterCollectionViewItem.xib */,
 				ABB04E872515A8160038D75C /* Info.plist */,
 				ABB04E882515A8160038D75C /* VirtualCameraSampleController.entitlements */,
 				FAEB5B7825E556F8009273E7 /* VirtualCameraSampleController-Bridging-Header.h */,
 				FAEB5B7D25E65303009273E7 /* SampleComposerObj.swift */,
+				FAF2D26425EFA270003EEEA5 /* Filters.swift */,
+				FAF2D26625EFA3BA003EEEA5 /* FilterObject.swift */,
+				FAF2D27225EFC83D003EEEA5 /* SettingsViewController.swift */,
 			);
 			path = VirtualCameraSampleController;
 			sourceTree = "<group>";
@@ -247,7 +352,43 @@
 		FA4075EE25E5490F0043F32F /* Effects */ = {
 			isa = PBXGroup;
 			children = (
-				FA4075EF25E5491C0043F32F /* fire */,
+				FAF2D2C325EFF201003EEEA5 /* b&w */,
+				FAF2D2D925EFF202003EEEA5 /* blood_moon */,
+				FAF2D2DF25EFF202003EEEA5 /* blue_laser */,
+				FAF2D2D325EFF202003EEEA5 /* bone */,
+				FAF2D2D225EFF201003EEEA5 /* bubble_gum */,
+				FAF2D2CD25EFF201003EEEA5 /* caustics */,
+				FAF2D2C125EFF201003EEEA5 /* chromatic_aberration */,
+				FAF2D2BF25EFF201003EEEA5 /* club_party_lights */,
+				FAF2D2C025EFF201003EEEA5 /* cyber_ghost */,
+				FAF2D2CE25EFF201003EEEA5 /* displaced_glow */,
+				FAF2D2D825EFF202003EEEA5 /* dreamy_bloom */,
+				FAF2D2D725EFF202003EEEA5 /* fireflies */,
+				FAF2D2CA25EFF201003EEEA5 /* glitch */,
+				FAF2D2D125EFF201003EEEA5 /* glitch_v2 */,
+				FAF2D2E225EFF202003EEEA5 /* glitter */,
+				FAF2D2C225EFF201003EEEA5 /* glowygoo */,
+				FAF2D2C425EFF201003EEEA5 /* green_laser */,
+				FAF2D2C625EFF201003EEEA5 /* green_vision */,
+				FAF2D2C525EFF201003EEEA5 /* lens_flare */,
+				FAF2D2CF25EFF201003EEEA5 /* mad_max */,
+				FAF2D2DC25EFF202003EEEA5 /* matrix */,
+				FAF2D2D525EFF202003EEEA5 /* night_rider */,
+				FAF2D2DD25EFF202003EEEA5 /* night_vision */,
+				FAF2D2DE25EFF202003EEEA5 /* old_film */,
+				FAF2D2CB25EFF201003EEEA5 /* old_film_dust */,
+				FAF2D2BE25EFF201003EEEA5 /* overlay_fire */,
+				FAF2D2C725EFF201003EEEA5 /* smoke */,
+				FAF2D2E025EFF202003EEEA5 /* stars */,
+				FAF2D2DA25EFF202003EEEA5 /* static */,
+				FAF2D2E125EFF202003EEEA5 /* static_strong */,
+				FAF2D2D425EFF202003EEEA5 /* super_grainy */,
+				FAF2D2D625EFF202003EEEA5 /* thermal_vision */,
+				FAF2D2C825EFF201003EEEA5 /* trident_splash */,
+				FAF2D2DB25EFF202003EEEA5 /* trippy */,
+				FAF2D2C925EFF201003EEEA5 /* velvet */,
+				FAF2D2D025EFF201003EEEA5 /* velvet-2 */,
+				FAF2D2CC25EFF201003EEEA5 /* vhs */,
 			);
 			path = Effects;
 			sourceTree = "<group>";
@@ -255,36 +396,53 @@
 		FAAA7D3D25E804F300D6FEE0 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
-				FAAA7D3E25E804F300D6FEE0 /* twistedFace */,
-				FAAA7D3F25E804F300D6FEE0 /* sleepingmask */,
-				FAAA7D4025E804F300D6FEE0 /* dalmatian */,
-				FAAA7D4125E804F300D6FEE0 /* rain */,
-				FAAA7D4225E804F300D6FEE0 /* drawingmanga */,
-				FAAA7D4325E804F300D6FEE0 /* grumpycat */,
-				FAAA7D4425E804F300D6FEE0 /* tv80 */,
-				FAAA7D4525E804F300D6FEE0 /* heart */,
-				FAAA7D4625E804F300D6FEE0 /* bleachbypass */,
-				FAAA7D4725E804F300D6FEE0 /* flowers */,
-				FAAA7D4825E804F300D6FEE0 /* pug */,
-				FAAA7D4925E804F300D6FEE0 /* blizzard */,
-				FAAA7D4A25E804F300D6FEE0 /* realvhs */,
-				FAAA7D4B25E804F300D6FEE0 /* fatify */,
-				FAAA7D4C25E804F300D6FEE0 /* tripleface */,
-				FAAA7D4D25E804F300D6FEE0 /* sepia */,
-				FAAA7D4E25E804F300D6FEE0 /* slash */,
-				FAAA7D4F25E804F300D6FEE0 /* teddycigar */,
-				FAAA7D5025E804F300D6FEE0 /* smallface */,
-				FAAA7D5125E804F300D6FEE0 /* fire */,
-				FAAA7D5225E804F300D6FEE0 /* kanye */,
-				FAAA7D5325E804F300D6FEE0 /* mudMask */,
-				FAAA7D5425E804F300D6FEE0 /* aviators */,
-				FAAA7D5525E804F300D6FEE0 /* obama */,
-				FAAA7D5625E804F300D6FEE0 /* filmcolorperfection */,
-				FAAA7D5725E804F300D6FEE0 /* koala */,
-				FAAA7D5825E804F300D6FEE0 /* bigmouth */,
-				FAAA7D5925E804F300D6FEE0 /* lion */,
+				FAF2D29825EFD137003EEEA5 /* b&w */,
+				FAF2D28C25EFD137003EEEA5 /* blood_moon */,
+				FAF2D27725EFD136003EEEA5 /* blue_laser */,
+				FAF2D28825EFD137003EEEA5 /* bone */,
+				FAF2D28E25EFD137003EEEA5 /* bubble_gum */,
+				FAF2D27E25EFD137003EEEA5 /* caustics */,
+				FAF2D28925EFD137003EEEA5 /* chromatic_aberration */,
+				FAF2D28325EFD137003EEEA5 /* club_party_lights */,
+				FAF2D28D25EFD137003EEEA5 /* cyber_ghost */,
+				FAF2D27F25EFD137003EEEA5 /* displaced_glow */,
+				FAF2D28225EFD137003EEEA5 /* dreamy_bloom */,
+				FAF2D29325EFD137003EEEA5 /* fireflies */,
+				FAF2D27825EFD136003EEEA5 /* glitch */,
+				FAF2D28125EFD137003EEEA5 /* glitch_v2 */,
+				FAF2D27425EFD136003EEEA5 /* glitter */,
+				FAF2D29225EFD137003EEEA5 /* glowygoo */,
+				FAF2D28F25EFD137003EEEA5 /* green_laser */,
+				FAF2D29025EFD137003EEEA5 /* green_vision */,
+				FAF2D28725EFD137003EEEA5 /* lens_flare */,
+				FAF2D27C25EFD136003EEEA5 /* mad_max */,
+				FAF2D28B25EFD137003EEEA5 /* matrix */,
+				FAF2D27525EFD136003EEEA5 /* night_rider */,
+				FAF2D27B25EFD136003EEEA5 /* night_vision */,
+				FAF2D29125EFD137003EEEA5 /* old_film */,
+				FAF2D28025EFD137003EEEA5 /* old_film_dust */,
+				FAF2D28625EFD137003EEEA5 /* overlay_fire */,
+				FAF2D29525EFD137003EEEA5 /* smoke */,
+				FAF2D28425EFD137003EEEA5 /* stars */,
+				FAF2D29725EFD137003EEEA5 /* static */,
+				FAF2D28A25EFD137003EEEA5 /* static_strong */,
+				FAF2D28525EFD137003EEEA5 /* super_grainy */,
+				FAF2D29425EFD137003EEEA5 /* thermal_vision */,
+				FAF2D27925EFD136003EEEA5 /* trident_splash */,
+				FAF2D27A25EFD136003EEEA5 /* trippy */,
+				FAF2D27625EFD136003EEEA5 /* velvet */,
+				FAF2D29625EFD137003EEEA5 /* velvet-2 */,
+				FAF2D27D25EFD136003EEEA5 /* vhs */,
 			);
 			path = Effects;
+			sourceTree = "<group>";
+		};
+		FAF2D26125EFA180003EEEA5 /* FilterCollection */ = {
+			isa = PBXGroup;
+			children = (
+				FAF2D26225EFA195003EEEA5 /* FilterCollectionViewItem.swift */,
+			);
+			path = FilterCollection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,7 +526,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4075F025E5491C0043F32F /* fire in Resources */,
+				FAF2D2F325EFF202003EEEA5 /* displaced_glow in Resources */,
+				FAF2D2F725EFF202003EEEA5 /* bubble_gum in Resources */,
+				FAF2D2EF25EFF202003EEEA5 /* glitch in Resources */,
+				FAF2D2E825EFF202003EEEA5 /* b&w in Resources */,
+				FAF2D2EB25EFF202003EEEA5 /* green_vision in Resources */,
+				FAF2D2ED25EFF202003EEEA5 /* trident_splash in Resources */,
+				FAF2D2E625EFF202003EEEA5 /* chromatic_aberration in Resources */,
+				FAF2D30725EFF202003EEEA5 /* glitter in Resources */,
+				FAF2D2F425EFF202003EEEA5 /* mad_max in Resources */,
+				FAF2D30125EFF202003EEEA5 /* matrix in Resources */,
+				FAF2D30625EFF202003EEEA5 /* static_strong in Resources */,
+				FAF2D30325EFF202003EEEA5 /* old_film in Resources */,
+				FAF2D2F825EFF202003EEEA5 /* bone in Resources */,
+				FAF2D2FD25EFF202003EEEA5 /* dreamy_bloom in Resources */,
+				FAF2D30025EFF202003EEEA5 /* trippy in Resources */,
+				FAF2D2EE25EFF202003EEEA5 /* velvet in Resources */,
+				FAF2D30425EFF202003EEEA5 /* blue_laser in Resources */,
+				FAF2D2FA25EFF202003EEEA5 /* night_rider in Resources */,
+				FAF2D2F125EFF202003EEEA5 /* vhs in Resources */,
+				FAF2D2F925EFF202003EEEA5 /* super_grainy in Resources */,
+				FAF2D2FE25EFF202003EEEA5 /* blood_moon in Resources */,
+				FAF2D2F225EFF202003EEEA5 /* caustics in Resources */,
+				FAF2D2FB25EFF202003EEEA5 /* thermal_vision in Resources */,
+				FAF2D2FF25EFF202003EEEA5 /* static in Resources */,
+				FAF2D30525EFF202003EEEA5 /* stars in Resources */,
+				FAF2D2F525EFF202003EEEA5 /* velvet-2 in Resources */,
+				FAF2D2F625EFF202003EEEA5 /* glitch_v2 in Resources */,
+				FAF2D2F025EFF202003EEEA5 /* old_film_dust in Resources */,
+				FAF2D2FC25EFF202003EEEA5 /* fireflies in Resources */,
+				FAF2D2E925EFF202003EEEA5 /* green_laser in Resources */,
+				FAF2D2E525EFF202003EEEA5 /* cyber_ghost in Resources */,
+				FAF2D2E425EFF202003EEEA5 /* club_party_lights in Resources */,
+				FAF2D2EA25EFF202003EEEA5 /* lens_flare in Resources */,
+				FAF2D2E325EFF202003EEEA5 /* overlay_fire in Resources */,
+				FAF2D30225EFF202003EEEA5 /* night_vision in Resources */,
+				FAF2D2EC25EFF202003EEEA5 /* smoke in Resources */,
+				FAF2D2E725EFF202003EEEA5 /* glowygoo in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,36 +570,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAA7D6E25E804F400D6FEE0 /* kanye in Resources */,
-				FAAA7D5D25E804F300D6FEE0 /* rain in Resources */,
-				FAAA7D6425E804F400D6FEE0 /* pug in Resources */,
-				FAAA7D7125E804F400D6FEE0 /* obama in Resources */,
-				FAAA7D5A25E804F300D6FEE0 /* twistedFace in Resources */,
+				FAF2D2AC25EFD137003EEEA5 /* lens_flare in Resources */,
+				FAF2D2A825EFD137003EEEA5 /* club_party_lights in Resources */,
+				FAF2D2A725EFD137003EEEA5 /* dreamy_bloom in Resources */,
+				FAF2D2A925EFD137003EEEA5 /* stars in Resources */,
+				FAF2D2AB25EFD137003EEEA5 /* overlay_fire in Resources */,
+				FAF2D2B025EFD137003EEEA5 /* matrix in Resources */,
+				FAF2D2AE25EFD137003EEEA5 /* chromatic_aberration in Resources */,
+				FAF2D2B725EFD137003EEEA5 /* glowygoo in Resources */,
+				FAF2D2B825EFD137003EEEA5 /* fireflies in Resources */,
+				FAF2D2A025EFD137003EEEA5 /* night_vision in Resources */,
+				FAF2D29F25EFD137003EEEA5 /* trippy in Resources */,
+				FAF2D2BA25EFD137003EEEA5 /* smoke in Resources */,
+				FAF2D2B625EFD137003EEEA5 /* old_film in Resources */,
+				FAF2D2BC25EFD137003EEEA5 /* static in Resources */,
+				FAF2D2A525EFD137003EEEA5 /* old_film_dust in Resources */,
+				FAF2D2AD25EFD137003EEEA5 /* bone in Resources */,
+				FAF2D2AA25EFD137003EEEA5 /* super_grainy in Resources */,
 				ABB04E832515A8160038D75C /* Assets.xcassets in Resources */,
-				FAAA7D5E25E804F300D6FEE0 /* drawingmanga in Resources */,
-				FAAA7D5C25E804F300D6FEE0 /* dalmatian in Resources */,
-				FAAA7D6625E804F400D6FEE0 /* realvhs in Resources */,
-				FAAA7D6C25E804F400D6FEE0 /* smallface in Resources */,
-				FAAA7D6F25E804F400D6FEE0 /* mudMask in Resources */,
-				FAAA7D6D25E804F400D6FEE0 /* fire in Resources */,
-				FAAA7D7425E804F400D6FEE0 /* bigmouth in Resources */,
-				FAAA7D5F25E804F300D6FEE0 /* grumpycat in Resources */,
-				FAAA7D6025E804F300D6FEE0 /* tv80 in Resources */,
-				FAAA7D6725E804F400D6FEE0 /* fatify in Resources */,
-				FAAA7D6125E804F300D6FEE0 /* heart in Resources */,
+				FAF2D29E25EFD137003EEEA5 /* trident_splash in Resources */,
+				FAF2D2B125EFD137003EEEA5 /* blood_moon in Resources */,
+				FAF2D2B425EFD137003EEEA5 /* green_laser in Resources */,
+				FAF2D29D25EFD137003EEEA5 /* glitch in Resources */,
+				FAF2D29C25EFD137003EEEA5 /* blue_laser in Resources */,
+				FAF2D2A125EFD137003EEEA5 /* mad_max in Resources */,
+				FAF2D2A425EFD137003EEEA5 /* displaced_glow in Resources */,
+				FAF2D2B525EFD137003EEEA5 /* green_vision in Resources */,
 				ABB04E862515A8160038D75C /* Main.storyboard in Resources */,
-				FAAA7D6525E804F400D6FEE0 /* blizzard in Resources */,
-				FAAA7D6825E804F400D6FEE0 /* tripleface in Resources */,
-				FAAA7D6B25E804F400D6FEE0 /* teddycigar in Resources */,
-				FAAA7D6A25E804F400D6FEE0 /* slash in Resources */,
-				FAAA7D7525E804F400D6FEE0 /* lion in Resources */,
-				FAAA7D7325E804F400D6FEE0 /* koala in Resources */,
-				FAAA7D6325E804F400D6FEE0 /* flowers in Resources */,
-				FAAA7D6925E804F400D6FEE0 /* sepia in Resources */,
-				FAAA7D6225E804F300D6FEE0 /* bleachbypass in Resources */,
-				FAAA7D7225E804F400D6FEE0 /* filmcolorperfection in Resources */,
-				FAAA7D7025E804F400D6FEE0 /* aviators in Resources */,
-				FAAA7D5B25E804F300D6FEE0 /* sleepingmask in Resources */,
+				FAF2D29925EFD137003EEEA5 /* glitter in Resources */,
+				FAF2D2B925EFD137003EEEA5 /* thermal_vision in Resources */,
+				FAF2D2A325EFD137003EEEA5 /* caustics in Resources */,
+				FAF2D2BB25EFD137003EEEA5 /* velvet-2 in Resources */,
+				FAF2D2B325EFD137003EEEA5 /* bubble_gum in Resources */,
+				FAF2D27125EFBE1F003EEEA5 /* FilterCollectionViewItem.xib in Resources */,
+				FAF2D2A225EFD137003EEEA5 /* vhs in Resources */,
+				FAF2D2BD25EFD137003EEEA5 /* b&w in Resources */,
+				FAF2D2B225EFD137003EEEA5 /* cyber_ghost in Resources */,
+				FAF2D2A625EFD137003EEEA5 /* glitch_v2 in Resources */,
+				FAF2D29B25EFD137003EEEA5 /* velvet in Resources */,
+				FAF2D29A25EFD137003EEEA5 /* night_rider in Resources */,
+				FAF2D2AF25EFD137003EEEA5 /* static_strong in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,11 +640,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF2D26725EFA3BA003EEEA5 /* FilterObject.swift in Sources */,
 				ABB04E9D25162D310038D75C /* WindowController.swift in Sources */,
+				FAF2D26525EFA270003EEEA5 /* Filters.swift in Sources */,
+				FAF2D27325EFC83D003EEEA5 /* SettingsViewController.swift in Sources */,
 				ABB04EB225194A7D0038D75C /* Config.swift in Sources */,
 				ABB04E812515A8140038D75C /* ViewController.swift in Sources */,
 				FAEB5B7E25E65303009273E7 /* SampleComposerObj.swift in Sources */,
 				ABB04E7F2515A8140038D75C /* AppDelegate.swift in Sources */,
+				FAF2D26325EFA195003EEEA5 /* FilterCollectionViewItem.swift in Sources */,
 				ABB04EB425194A7D0038D75C /* SettingsPasteboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

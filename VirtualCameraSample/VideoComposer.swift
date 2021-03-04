@@ -15,7 +15,9 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
     private let cameraCapture = CameraCapture()
     private let context = CIContext()
     private var settingsTimer: Timer?
-    private var deepAR: DeepAR?
+    private var deepAR: DeepAR!
+
+    private var arFilter: String = "none"
 
     private let filter = CIFilter(name: "CISourceOverCompositing")
     private var textImage: CIImage?
@@ -33,27 +35,31 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
     }
 
     func startRunning() {
-        self.deepAR = DeepAR.init()
-        self.deepAR?.setLicenseKey("949a402a628926a9ceb24be7ab4210d72f5220b091a54b64a061a02ab8f48f3b9948e48704073c67")
-        self.deepAR?.delegate = self
         
-        self.deepAR?.initializeOffscreen(withWidth: 1, height: 1)
-        self.deepAR?.startCapture(withOutputWidth: 1280, outputHeight: 720, subframe: CGRect(x: 0, y: 0, width: 1280, height: 720))
-//        self.deepAR?.changeLiveMode(true)
-//        startPollingSettings()
+        self.deepAR = DeepAR()
+        self.deepAR.setLicenseKey("949a402a628926a9ceb24be7ab4210d72f5220b091a54b64a061a02ab8f48f3b9948e48704073c67")
+        self.deepAR.delegate = self
         cameraCapture.output.setSampleBufferDelegate(self, queue: .main)
         cameraCapture.startRunning()
-   
+        self.deepAR.initializeOffscreen(withWidth: 0, height: 0)
+        self.deepAR.changeLiveMode(true)
     }
     
     func didInitialize() {
-        self.deepAR?.switchEffect(withSlot: "0", path: Bundle.main.path(forResource: "fire", ofType: nil))
-
-//        self.deepAR.setRenderingResolutionWithWidth(1280, height: 720)
-//        self.deepAR.changeLiveMode(true)
-//        self.deepAR.startCapture(withOutputWidth: 1280, outputHeight: 720, subframe: CGRect(x: 0,y: 0,width: 1280,height: 720))
+        self.deepAR.setRenderingResolutionWithWidth(1920, height: 1080)
+        self.startPollingSettings()
+//        let path = (Bundle(identifier: "tokyo.shmdevelopment.VirtualCameraSample")?.resourcePath)! + "/overlay_fire"
+//        self.deepAR.switchEffect(withSlot: "0", path: path)
     }
-
+    
+    func didSwitchEffect(effect: String) {
+//        self.textImage = self.makeTextCIImage(text: effect)
+    }
+    
+    
+    func onError(withCode code: ARErrorType, error: String!) {
+//        self.textImage = self.makeTextCIImage(text: error)
+    }
     func stopRunning() {
         settingsTimer?.invalidate()
         settingsTimer = nil
@@ -65,15 +71,24 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
         settingsTimer = nil
         settingsTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
             let settings = SettingsPasteboard.shared.current()
-            let text1 = settings["text1"] as? String ?? "Version One"
-            self.textImage = self.makeTextCIImage(text: text1)
+            let arFilter = settings["filter"] as? String ?? "none"
+            if self.arFilter != arFilter {
+                self.arFilter = arFilter
+                let path = (Bundle(identifier: "tokyo.shmdevelopment.VirtualCameraSample")?.resourcePath)! + "/"+arFilter
+                self.deepAR.switchEffect(withSlot: "0", path: path)
+            }
+         
         }
         settingsTimer?.fire()
     }
 
     func frameAvailable(_ sampleBuffer: CMSampleBuffer!) {
         
-//        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+//        let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+        delegate?.videoComposer(self, didComposeImageBuffer: imageBuffer)
+
 //        delegate?.videoComposer(self, didComposeImageBuffer: imageBuffer)
 ////        self.count += 1
 ////        self.textImage = self.makeTextCIImage(text: String(self.count))
@@ -86,7 +101,7 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
 //
 //        CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
 //
-//        self.textImage = self.makeTextCIImage(text: String(luma))
+////        self.textImage = self.makeTextCIImage(text: String(luma))
 //
 ////        delegate?.videoComposer(self, didComposeImageBuffer: imageBuffer)
 ////
@@ -111,22 +126,29 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
     }
     
     func didSwitchEffect(_ slot: String!) {
-        self.textImage = self.makeTextCIImage(text: "SWITCHED EFFECT")
+//        self.textImage = self.makeTextCIImage(text: "SWITCHED EFFECT")
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         if output == cameraCapture.output {
-            let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-            CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0));
-            self.deepAR?.processFrameAndReturn(pixelBuffer, outputBuffer: pixelBuffer, mirror: false, orientation: 0)
 
-            let int32Buffer = unsafeBitCast(CVPixelBufferGetBaseAddress(pixelBuffer), to: UnsafeMutablePointer<UInt32>.self)
-            let int32PerRow = CVPixelBufferGetBytesPerRow(pixelBuffer)
-            // Get BGRA value for pixel (43, 17)
-            let luma: UInt32 = int32Buffer[17 * int32PerRow + 10]
-
-            CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
-            delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
+            if(self.arFilter == "none") {
+                guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
+                delegate?.videoComposer(self, didComposeImageBuffer: imageBuffer)
+            } else {
+                self.deepAR?.enqueueCameraFrame(sampleBuffer, mirror: false)
+            }
+//            let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
+//            CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0));
+//            self.deepAR?.processFrameAndReturn(pixelBuffer, outputBuffer: pixelBuffer, mirror: false, orientation: 0)
+//
+//            let int32Buffer = unsafeBitCast(CVPixelBufferGetBaseAddress(pixelBuffer), to: UnsafeMutablePointer<UInt32>.self)
+//            let int32PerRow = CVPixelBufferGetBytesPerRow(pixelBuffer)
+//            // Get BGRA value for pixel (43, 17)
+//            let luma: UInt32 = int32Buffer[17 * int32PerRow + 10]
+//
+//            CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
+//            delegate?.videoComposer(self, didComposeImageBuffer: pixelBuffer)
 
 //            guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
 //
@@ -184,7 +206,7 @@ class VideoComposer: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, Dee
     }
 
     private func makeTextCIImage(text: String) -> CIImage? {
-        let font = NSFont(name: "HiraginoSans-W8", size: 100) ?? NSFont.systemFont(ofSize: 100)
+        let font = NSFont(name: "HiraginoSans-W8", size: 20) ?? NSFont.systemFont(ofSize: 20)
         let size = NSSize(width: 1280.0, height: 720)
 
         let image = NSImage(size: size, flipped: false) { (rect) -> Bool in

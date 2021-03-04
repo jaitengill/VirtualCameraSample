@@ -47,6 +47,10 @@ typedef enum
     BGRA,      // 2
     ARGB,      // 3
     ABGR,      // 4
+    HEADSAPP_VERTICAL,  // 5
+    HEADSAPP_HORIZONTAL,  // 6
+    HEADSAPP1,  // 7
+    HEADSAPP2,  // 8
     
     COUNT
 } OutputFormat;
@@ -190,15 +194,13 @@ typedef enum {
 - (void)setFaceDetectionSensitivity:(NSInteger)sensitivity;
 
 // Change a float parameter on a GameObject, the parameter variable contains parameter name, eg. blendshape name
-- (void)changeParameter:(NSString*)gameObject component:(NSString*)component parameter:(NSString*)parameter floatValue:(float)value;
+- (void)changeParameter:(NSString*)gameObject component:(NSString*)component parameter:(NSString*)parameter floatValue:(CGFloat)value;
 // Change a vector4 parameter on a GameObject, the parameter variable contains parameter name, eg. uniform name
 - (void)changeParameter:(NSString*)gameObject component:(NSString*)component parameter:(NSString*)parameter vectorValue:(Vector4)value;
 // Change a vector3 parameter on a GameObject, the parameter variable contains parameter name, eg. transform name
 - (void)changeParameter:(NSString*)gameObject component:(NSString*)component parameter:(NSString*)parameter vector3Value:(Vector3)value;
 // Change a bool parameter on a GameObject, the parameter variable contains parameter name, eg. uniform name
 - (void)changeParameter:(NSString*)gameObject component:(NSString*)component parameter:(NSString*)parameter boolValue:(BOOL)value;
-// Change a string parameter on a GameObject, eg. blend mode
-- (void)changeParameter:(NSString *)gameObject component:(NSString *)component parameter:(NSString *)parameter stringValue:(NSString *)value;
 // Change an image parameter on a GameObject, the parameter variable contains parameter name, eg. uniform name
 - (void)changeParameter:(NSString*)gameObject component:(NSString*)component parameter:(NSString*)parameter image:(NSImage*)image;
 // Change an image parameter on a GameObject, the parameter variable contains parameter name, eg. uniform name

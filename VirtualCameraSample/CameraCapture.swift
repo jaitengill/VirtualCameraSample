@@ -8,6 +8,8 @@ class CameraCapture: NSObject {
     let output = AVCaptureVideoDataOutput()
 
     override init() {
+        output.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
+        output.alwaysDiscardsLateVideoFrames = true
         session.sessionPreset = .high
 
         if let device = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front) {
